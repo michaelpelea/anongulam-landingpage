@@ -65,6 +65,12 @@
         font-size: 0.9rem;
         color: #777;
       }
+
+      @media screen and (max-width: 639px) {
+        .cta button {
+          margin-top: 4px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -92,8 +98,21 @@
             plan for busy moms.</strong
           >
         </p>
-        <input type="email" placeholder="Enter your email" />
-        <button>Get Early Access</button>
+        <form action="https://formspree.io/f/xqalewwg" method="POST">
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <input type="text" name="_gotcha" style="display: none" />
+          <input
+            type="hidden"
+            name="_redirect"
+            value="https://www.anongulam.com/thank-you.html"
+          />
+          <button type="submit">Get Early Access</button>
+        </form>
       </div>
 
       <div class="footer">
